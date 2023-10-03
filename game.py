@@ -1,6 +1,12 @@
 from tkinter import *
 from tkinter import ttk
 
+#			red      blue        yellow     green      orange    purple     lime       dark blue
+Colors = ["#FD7B7B", "#7F6AC2", "#FDE77B", "#69D869", "#FDC57B", "#A450A4", "#DFF477", "#5581A3"]
+AcColors = ["#D14141", "#4A3490", "#D1B841", "#34A734", "#D19341", "#882A88", "#B2CA3F", "#306186"]
+
+BGColor = "#F6FFB4"
+
 QuestionAmount = 0
 AnswersAmount = 0
 Questions = 0
@@ -10,6 +16,8 @@ QuestionNum = 0
 
 Falses = 0
 Trues = 0
+
+# File naming
 
 FileName = "questions/first"
 FileSRC = FileName + ".qz"
