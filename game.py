@@ -7,6 +7,7 @@ AcColors = ["#D14141", "#4A3490", "#D1B841", "#34A734", "#D19341", "#882A88", "#
 
 BGColor = "#F6FFB4"
 
+BoxesAmount = 1
 QuestionAmount = 0
 AnswersAmount = 0
 Questions = 0
@@ -44,6 +45,13 @@ for QuestionsAmountNum in range(QuestionAmount):
 
 File.close()
 
+if AnswersAmount % 4 == 0 and AnswersAmount > 8:
+	BoxesAmount = 4
+elif AnswersAmount % 3 == 0 and AnswersAmount > 6:
+	BoxesAmount = 3
+elif AnswersAmount % 2 == 0:
+	BoxesAmount = 2
+
 def NextQuestion():
 	global QuestionNum
 	global QuestionAmount
@@ -60,6 +68,3 @@ def AnswerVer(Num = None, AnswerNum = None):
 		else:
 			Falses += 1
 	return Trues, Falses
-
-print(f"True answers = {Trues}")
-print(f"False answers = {Falses}")
